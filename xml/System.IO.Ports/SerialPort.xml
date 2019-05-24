@@ -685,7 +685,7 @@
 ## Remarks  
  调用此方法关闭<xref:System.IO.Ports.SerialPort>对象和清除这两个接收和传输的缓冲区。 此方法调用<xref:System.ComponentModel.Component.Dispose?displayProperty=nameWithType>方法，调用受保护<xref:System.IO.Ports.SerialPort.Dispose%28System.Boolean%29?displayProperty=nameWithType>方法替换`disposing`参数设置为`true`。  
   
- 任何应用程序的最佳做法是等待一段时间后调用内<xref:System.IO.Ports.SerialPort.Close%2A>方法，然后再尝试调用<xref:System.IO.Ports.SerialPort.Open%2A>方法中，为端口可能不会关闭立即。  
+ 任何应用程序的最佳做法是：调用<xref:System.IO.Ports.SerialPort.Close%2A>方法后等待一段时间，然后再尝试调用<xref:System.IO.Ports.SerialPort.Open%2A>方法，因为端口可能不会立即关闭。  
   
    
   
